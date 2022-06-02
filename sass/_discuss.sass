@@ -1,0 +1,72 @@
+.discuss
+    margin-top: 140px
+    min-height: 480px
+    &__row
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-top: 60px
+        &-description
+            max-width: 470px
+            font-family: $text
+            color: $text-color
+            font-style: normal
+            font-weight: 400
+            font-size: 22px
+            line-height: 170%
+        &-form
+            max-width: 850px
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            min-height: 360px
+            &-input
+                outline: none
+                margin-bottom: 40px
+                font-size: 22px
+                font-family: $title
+                width: 400px
+                height: 40px
+                padding:  0px 10px 20px 10px
+                border: none
+                border-bottom: 1px solid $text-color
+            &-textarea
+                font-family: $title
+                padding: 0px 10px 20px 10px
+                font-size: 22px
+                width: 100%
+                height: 80px
+                line-height: 170%
+                border: none
+                border-bottom: 1px solid $text-color
+                resize: none
+                margin-bottom: 40px
+                outline: none
+            & button
+                line-height: 12px
+                position: relative
+                padding: 20px 50px
+                font-weight: 700
+                font-size: 18px
+                border: 3px solid $text-color-hover
+                color: $text-color
+                font-family: $text
+                background: transparent
+                overflow: hidden
+                &::after
+                    content: ""
+                    display: block
+                    top: -2px
+                    width: 192px
+                    height: 65px
+                    z-index: -1
+                    background:  $text-color-hover
+                    position: absolute
+                    left: -102%
+                    transition: all .3s ease
+                &:hover
+                    color: #fff
+                    border: 3px solid $text-color-hover
+                    &::after
+                        left: 0
+                    

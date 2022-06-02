@@ -1,0 +1,52 @@
+@import "variable"
+
+.agency
+    margin-top: 140px
+    min-height: 500px
+    .container
+        position: relative
+    &__title
+        margin-top: 60px
+    &__text
+        margin-top: 60px
+        font-family: $title
+        font-style: normal
+        font-weight: 400
+        font-size: 38px
+        line-height: 170%
+        & span
+            color: $text-color-hover
+    &__row
+        position: absolute
+        display: flex
+        // flex-wrap: wrap
+        margin-top: 60px
+        width: 1285px
+        height: 6px
+        background: #363636
+        right: 0
+        &-item
+            width: 385px
+            height: 185px
+            padding: 40px 210px 10px 10px
+            &:hover
+                background: $blue-gradient
+                transition: all .5s ease
+                .agency__row-item-number, .agency__row-item-text
+                    color: #fff
+                    transition: all .5s ease
+            &-number
+                font-family: $title
+                color: $text-color
+                font-style: normal
+                font-weight: 700
+                font-size: 50px
+                line-height: 140%
+            &-text
+                font-family: $text
+                color: $text-color
+                font-style: normal
+                font-weight: 500
+                font-size: 22px
+                line-height: 140%
+

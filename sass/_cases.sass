@@ -1,0 +1,106 @@
+.cases
+    margin-top: 140px
+    min-height: 1150px 
+    & .box
+        margin-top: 60px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        .cases__tabs
+            max-width: 280px
+            &-item
+                margin-bottom: 10px
+                &:last-child
+                    margin-bottom: 0
+                & a 
+                    font-family: $text
+                    color: $text-color
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 22px
+                    line-height: 170%
+                    text-decoration: none
+                    transition: all .3s
+                    position: relative
+                    left: 0
+                    &:hover
+                        color: $text-color-hover
+                        font-weight: 600
+                        transition: all .3s
+                        position: relative
+                        left: 10px
+        .active    
+            & a
+                color: $text-color-hover  
+                font-weight: 600       
+        .cases__project
+            display: flex
+            justify-content: flex-start
+            max-width: 1280px
+            flex-wrap: wrap
+            &-item
+                position: relative
+                margin: 0px 20px 30px 0px
+                display: flex
+                flex-wrap: wrap
+                &-img
+                    position: relative
+                &-title
+                    position: absolute
+                    bottom: 125px
+                    left: 20px
+                    font-family: 
+                    font-style: normal
+                    font-weight: 700
+                    font-size: 28px
+                    line-height: 170%
+                &-text
+                    position: absolute
+                    bottom: 90px
+                    left: 20px
+                    font-family: $text
+                    color: $text-color
+                    font-style: normal
+                    font-weight: 400
+                    font-size: 18px
+                    line-height: 170%
+                &-link
+                    position: absolute
+                    bottom: 40px
+                    left: 20px
+                    & a 
+                        text-decoration: none
+                        font-family: $text
+                        color: $text-color
+                        font-style: normal
+                        font-weight: 600
+                        font-size: 18px
+                        line-height: 170%
+                        position: relative
+                        transition: all .5s ease
+                        // &::before
+                        //     content: url("../img/project/arrow.svg")
+                        //     display: block
+                        //     position: absolute
+                        //     left: 120px
+                        //     top: -6px
+                        //     transition: .3s
+                    & svg
+                        position: relative
+                        left: 0px
+                        top: -1px
+                        transition: all .5s ease
+            &-item:hover
+                & a
+                    color: $text-color-hover
+                    transition: all .5s ease
+                & svg
+                    transition: all .5s ease
+                    fill: $text-color-hover
+                    position: relative
+                    left: 20px
+                    transition: all .5s ease
+                           
+
+// .cases__project-item-link
+    

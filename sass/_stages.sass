@@ -1,0 +1,47 @@
+.stages
+    margin-top: 140px
+    &__box
+        margin-top: 60px
+        &-item
+            height: 60px
+            border-bottom: 4px solid $text-color
+            margin-bottom: 40px
+            overflow: hidden
+            position: relative
+            transition: all .5s
+            &:last-child
+                margin-bottom: 0
+            &-title
+                font-family: $title
+                color: $text-color
+                font-style: normal
+                font-weight: 500
+                font-size: 26px
+                line-height: 140%
+                transition: all .5s
+            &-description
+                position: absolute
+                opacity: 0
+                padding: 20px 0px 20px 0px
+                display: block
+                font-family: $text
+                color: $text-color
+                font-style: normal
+                font-weight: 400
+                font-size: 20px
+                line-height: 170%
+                transition: all .5s
+
+.stages__box-item:hover
+    height: 140px
+    border-bottom: 4px solid $text-color-hover
+    transition: all .5s
+    .title
+        color: $text-color-hover
+        font-weight: 700
+        transition: all .5s
+    .descr
+        color: $text-color
+        position: relative
+        opacity: 1
+        transition: all .5s

@@ -1,0 +1,249 @@
+@import "variable"
+@import "fonts"
+* 
+	box-sizing: border-box
+body
+	overflow-x: hidden
+.content
+	overflow: hidden
+	position: absolute
+	height: 900px
+	width: 100vw
+    
+	
+	.line-1
+		position: absolute
+		height: 900px
+		width: 2px
+		display: block
+		left: 320px
+		top: 0px
+		background: rgba(54, 54, 54, 0.1)
+		&-animate
+			display: block
+			position: absolute
+			height: 140px
+			width: 2px
+			background: $text-color-hover
+
+	.line-2
+		position: relative
+		width: 100%
+		height: 2px
+		left: 0px
+		top: 700px
+		background: rgba(54, 54, 54, 0.1)
+		&-animate
+			display: block
+			position: absolute
+			width: 140px
+			height: 2px
+			background: $text-color-hover
+.title
+	font-family: $title
+	color: $text-color
+	font-style: normal
+	font-weight: 600
+	font-size: 48px
+	line-height: 110%		
+.main
+	position: relative
+	min-height: 900px 
+	width: 100%
+	z-index: 9
+	.container
+		position: relative
+		display: flex
+		justify-content: space-between
+		height: 450px
+	
+.container
+	max-width: 1600px
+	margin: auto
+	
+.text-vertical
+	margin: 0
+	position: absolute
+	width: 641px
+	height: 214px
+	left: -400px
+	top: 250px
+	font-family: $text
+	font-style: normal
+	font-weight: 700
+	font-size: 165px
+	line-height: 130%
+	display: flex
+	align-items: center
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 23.13%, rgba(0, 0, 0, 0.03) 77.1%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent
+	background-clip: text
+	text-fill-color: transparent
+	opacity: 0.4
+	transform: rotate(-90deg)
+
+.menu
+	justify-content: end
+	flex-direction: column
+	display: flex
+	min-height: 500px
+	width: 180px
+	&__list
+		padding-left: 0
+		list-style: none
+	&__link
+		width: 400px
+		padding: 20px 10px 0px 10px 
+		display: flex
+		transition: all 2s
+		&:first-child
+			padding-top: 0
+		& a
+			text-decoration: none
+			font-family: $text
+			color: $text-color
+			font-style: normal
+			font-weight: 400
+			left: 0
+			font-size: 18px
+			line-height: 120%
+			transition: all .5s ease
+		& svg 
+			top: 7px
+			transition: all .5s ease
+			display: none
+			position: relative
+
+    		
+	&__link:hover
+		a
+			position: relative
+			left: 20px
+			color: $text-color-hover
+			transition: all .5s ease 
+			font-weight: 600
+		svg
+			display: block
+			position: relative
+			top: 7px
+			fill: $text-color-hover
+			transition: all .5s ease 
+
+.main__screen
+	width: 100%
+	max-width: 1280px
+	min-height: 500px
+	display: flex
+	flex-direction: column
+	justify-content: space-between
+	.header
+		width: 100%
+		margin-top: 40px
+		height: 30px
+		display: flex
+		justify-content: space-between
+		&__info
+			&-number
+				margin-right: 60px
+			&-number, &-mail
+				font-family: $text
+				font-style: normal
+				font-weight: 700
+				font-size: 18px
+				line-height: 120%
+				text-decoration: none
+				color: $text-color
+				left: 130px
+				&:hover
+					font-weight: 900
+					color: $text-color-hover
+					left: 130px
+	.offer
+		margin-top: 150px
+		&__title
+			margin: 0px 0px 30px 0px
+			font-family: $title
+			color: $text-color
+			font-style: normal
+			font-weight: 700
+			font-size: 75px
+			line-height: 130%
+		&__text
+			margin: 0px 0px 30px 0px
+			font-family: $text
+			color: $text-color
+			font-style: normal
+			font-weight: 400
+			font-size: 23px
+			line-height: 140%
+		&__link
+			position: relative
+			margin: 0
+			display: inline-block
+			z-index: 1
+			overflow: hidden
+			border: 3px solid $text-color-hover
+			padding: 20px 50px
+			font-style: normal
+			font-weight: 700
+			font-size: 18px
+			text-decoration: none
+			font-family: $text
+			color: $text-color
+			&::after
+				content: ""
+				transition: all .5s ease
+				z-index: -1
+				position: absolute
+				top: -2px
+				left: -102%
+				display: block
+				width: 338px
+				height: 70px
+				background: $text-color-hover
+                
+			&:hover
+				color: #fff
+				border: 3px solid $text-color-hover
+               	transition-delay: .5s
+				transition-duration: .5s
+				&::after
+					left: 0
+                   	transition-delay: .3s
+					transition-duration: .3s
+
+@keyframes line-1 
+	from 
+		margin-top: 0
+	
+	to 
+		margin-top: 900px
+	
+#elem
+	animation-direction: reverse
+	animation-duration: 10s
+	animation-name: line-1
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+@keyframes line-2 
+	from 
+		margin-left: 0
+	
+	to 
+		margin-left: 1800px
+	
+#elem-2
+	animation-direction: unsert
+	animation-duration: 10s
+	animation-name: line-2
+	animation-iteration-count: infinite
+	animation-timing-function: linear
+
+@import "agency"
+@import "cases"
+@import "service"
+@import "stages"
+@import "text"
+@import "discuss"
